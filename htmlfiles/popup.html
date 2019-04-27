@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <title>Bookmark App</title>
+    <script src="/plugins/jquery-3.4.0.min.js"></script>
+    <style>
+        body {
+            width: 500px;
+            height: 500px;
+            margin: 0px;
+        }
+        
+        input[type=text],
+        input,
+        select,
+        textarea {
+            width: 96%;
+            padding: 12px 20px;
+            margin-top: 8px;
+            margin-left: 2%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .wrapper-center {
+            text-align: center;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin-top: 10px;
+            bottom: 20px;
+            width: 60%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            cursor: pointer;
+            background-color: #357a38;
+        }
+        
+        #name {
+            font-size: 25px;
+            text-align: center;
+            padding: 20px;
+            background-color: #ccc;
+            border-bottom: 1px solid #b7b7b7;
+        }
+        
+        #savedSuccess {
+            text-align: center;
+            padding-top: 20px;
+            display: none;
+        }
+        
+        #records {
+            background-color: #f4f4f4;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+            padding-bottom: 10px;
+            display: none;
+        }
+        
+        .title {
+            display: block;
+            padding: 10px 10px 5px 10;
+            font-size: 15px;
+        }
+        
+        .url {
+            display: block;
+            padding: 0px 10px 0px 10px;
+            color: #666;
+        }
+        
+        .info {
+            display: block;
+            padding: 10px 10px 10px 10px;
+            color: #282828;
+        }
+        
+        .tags {
+            display: inline-block;
+            color: #666;
+            padding: 10px 10px 0px 10px;
+        }
+        
+        .category {
+            float: right;
+            padding: 10px 10px 0px 10px;
+        }
+        
+        .clear {
+            display: block;
+            clear: both;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+        
+        #headInfo {
+            text-align: center;
+            font-size: 20px;
+            display: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #1a9f9b;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="savedSuccess"><img src="https://irfanalam.net/green-tick.gif" alt="Saved"></div>
+    <p id="headInfo">Previously saved links to this category</p>
+    <div id="records"></div>
+
+    <div id="content">
+        <div id="name">Bookmark App</div>
+        <input id="datalistCategories" list="categories" name="myBrowser" placeholder="Select or Input Category" />
+        <datalist id="categories">
+        </datalist>
+        <input id="tags" type="text" placeholder="Add tags">
+        <textarea id="info" rows="4" cols="50" placeholder="Additional info"></textarea>
+        <div class="wrapper-center">
+            <button id="submitButton" type="submit" class="button">Save</button>
+        </div>
+    </div>
+</body>
+<script src="/scripts/popup.js"></script>
+
+</html>
